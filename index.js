@@ -17,7 +17,7 @@ function login(event) {
     localStorage.setItem("userPassword", pass);
 
     // Redirect ke akun.html
-    window.location.href = "index.html";
+    window.location.href = "landpage.html";
     return false;
 }
 
@@ -34,7 +34,7 @@ function signOut() {
     // Hapus data user dari localStorage saat logout
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userPassword");
-    window.location.href = "login.html";
+    window.location.href = "Login.html";
 }
 
 // Tambahan: pastikan tombol submit form memanggil fungsi login tanpa refresh
