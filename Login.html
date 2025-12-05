@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Toko Bangle</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="https://t3.ftcdn.net/jpg/01/04/18/52/360_F_104185226_IKoYj7oCdgIer8bbnKgIdwIOSxsggTXo.jpg" alt="Logo" class="login-logo">
+    </div>
+
+    <div class="login-box">
+        <form id="loginForm">
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁</span>
+            </div>
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+<script src="login.js"></script>
+</body>
+</html>

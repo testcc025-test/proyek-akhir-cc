@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun Toko Bangle</title>
+    <link rel="stylesheet" href="akun.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-left">
+        <a href="index.html" class="logo">Toko Bangle</a>
+    </div>
+    <nav class="nav-right">
+        <a href="shop.html">Shop</a>
+        <a href="keranjang.html">Keranjang</a>
+        <a href="akun.html">Account</a>
+        <a href="#" id="signout-btn">Sign Out</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Informasi Akun</h1>
+    <p>Email: <span id="displayEmail"></span></p>
+    <p>Password: <span id="displayPassword"></span></p>
+</main>
+
+<script>
+    // Ambil data dari localStorage
+    const email = localStorage.getItem('userEmail');
+    const password = localStorage.getItem('userPassword');
+
+    document.getElementById('displayEmail').textContent = email || '';
+    document.getElementById('displayPassword').textContent = password || '';
+
+    // Tombol Sign Out
+    document.getElementById('signout-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('userPassword');
+        window.location.href = 'login.html';
+    });
+</script>
+
+</body>
+</html>
