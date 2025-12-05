@@ -12,18 +12,18 @@ function login(event) {
         return false;
     }
 
-    // Simpan email dan password di localStorage
+    // Simpan email (dan jangan simpan password di aplikasi nyata)
     localStorage.setItem("userEmail", email);
-    localStorage.setItem("userPassword", pass);
+    // localStorage.setItem("userPassword", pass); // sebaiknya jangan simpan password
 
-    // Redirect ke akun.html
-    window.location.href = "index.html";
+    // Redirect ke akun.html (halaman akun) setelah login
+    window.location.href = "akun.html";
     return false;
 }
 
 function togglePassword() {
     const pw = document.getElementById("password");
-    pw.type = pw.type === "password" ? "text" : "password";
+    if (pw) pw.type = pw.type === "password" ? "text" : "password";
 }
 
 function goToAccount() {
@@ -34,10 +34,11 @@ function signOut() {
     // Hapus data user dari localStorage saat logout
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userPassword");
-    window.location.href = "login.html";
+    // Redirect ke halaman login yang sebenarnya (index.html)
+    window.location.href = "index.html";
 }
 
-// Tambahan: pastikan tombol submit form memanggil fungsi login tanpa refresh
+// Pastikan form submit memanggil fungsi login tanpa refresh
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("loginForm");
     if (form) {
