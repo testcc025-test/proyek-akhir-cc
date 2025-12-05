@@ -34,7 +34,7 @@ function signOut() {
     // Hapus data user dari localStorage saat logout
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userPassword");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 // Tambahan: pastikan tombol submit form memanggil fungsi login tanpa refresh
@@ -44,4 +44,5 @@ document.addEventListener("DOMContentLoaded", function() {
         form.addEventListener("submit", login);
     }
 });
+
 
