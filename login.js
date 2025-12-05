@@ -27,7 +27,7 @@ function togglePassword() {
 }
 
 function goToAccount() {
-    window.location.href = "akun.html";
+    window.location.href = "Login.html";
 }
 
 function signOut() {
@@ -44,5 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
         form.addEventListener("submit", login);
     }
 });
+
 
 
