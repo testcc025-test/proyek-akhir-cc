@@ -17,7 +17,7 @@ function login(event) {
     localStorage.setItem("userPassword", pass);
 
     // Redirect ke akun.html
-    window.location.href = "index.html";
+    window.location.href = "landpage.html";
     return false;
 }
 
@@ -44,3 +44,4 @@ document.addEventListener("DOMContentLoaded", function() {
         form.addEventListener("submit", login);
     }
 });
+
